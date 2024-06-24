@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="../header.jsp"%>
+<script type="text/javascript" ><%@ include file="product.js" %></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +11,6 @@
 </head>
 <body>
 	
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ include file="../header.jsp"%>
 
 <article>
 	<h1>Item</h1>

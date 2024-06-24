@@ -3,6 +3,9 @@ package com.kosa.mall.controller;
 import java.io.IOException;
 
 import com.kosa.mall.model.Action;
+import com.kosa.mall.model.CartDeleteAction;
+import com.kosa.mall.model.CartInsertAction;
+import com.kosa.mall.model.CartListAction;
 import com.kosa.mall.model.ContractAction;
 import com.kosa.mall.model.FindZipNumAction;
 import com.kosa.mall.model.IdCheckFormAction;
@@ -11,6 +14,7 @@ import com.kosa.mall.model.JoinAction;
 import com.kosa.mall.model.JoinFormAction;
 import com.kosa.mall.model.LoginAction;
 import com.kosa.mall.model.LoginFormAction;
+import com.kosa.mall.model.LogoutAction;
 import com.kosa.mall.model.ProductDetailAction;
 
 import jakarta.servlet.ServletException;
@@ -46,6 +50,14 @@ public class ProductMarket extends HttpServlet {
 	        action = new FindZipNumAction();
 	    }else if (command.equals("join")) {
 	        action = new JoinAction();
+	    } else if (command.equals("logout")) {
+	        action = new LogoutAction();
+	    }else if (command.equals("cart_insert")) {
+	        action = new CartInsertAction();
+	    }else if (command.equals("cart_list")) {
+	        action = new CartListAction();
+	    } else if (command.equals("cart_delete")) {
+	        action = new CartDeleteAction();
 	    }
 
 		if (action != null) {

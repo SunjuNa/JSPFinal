@@ -3,6 +3,8 @@ package com.kosa.mall.model;
 
 import java.io.IOException;
 
+import com.kosa.dto.MemberVO;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -21,7 +23,7 @@ public class LoginAction implements Action {
     
     MemberDAO memberDAO=MemberDAO.getInstance();
       
-    Member member=memberDAO.getMember(id);
+    MemberVO member =memberDAO.getMember(id);
     
     if(member!=null){
       if(member.getPwd().equals(pwd)){    

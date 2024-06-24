@@ -47,8 +47,8 @@ public class MemberDAO {
     return result;
   }
 
-  public Member getMember(String id) {       
-    Member memberVO= null;
+  public MemberVO getMember(String id) {       
+    MemberVO memberVO= null;
     String sql = "select * from member where id=?";
      
     Connection connn = null;
@@ -61,7 +61,7 @@ public class MemberDAO {
       pstmt.setString(1, id);
       rs = pstmt.executeQuery();
       if(rs.next()){
-        memberVO = new Member();
+        memberVO = new MemberVO();
         memberVO.setId(rs.getString("id"));
         memberVO.setPwd(rs.getString("pwd"));
         memberVO.setName(rs.getString("name"));
